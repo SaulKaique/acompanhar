@@ -26,10 +26,8 @@
  width: 500px;
 }
 
-
-.foi{
-        position: relative;
-        left: 300px;
+a:hover{
+    opacity: 0.;
 
 
 }

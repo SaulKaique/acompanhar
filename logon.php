@@ -13,25 +13,19 @@ $conexao = mysqli_connect($servidor,$user,$password,$banco);
 $login = $_POST ['login'];
 $senha = $_POST ['senha'];
 
-$sql = "SELECT * FROM usuarios WHERE login = '$login' ";
+/*Comando select para puxar os dados de login e senha no banco*/
+
+$sql = "SELECT * FROM usuarios where login = '$login'";
 $seach = mysqli_query($conexao,$sql);
 $array = mysqli_fetch_array($seach);
+
+/*Script para conferir os dados e iniciar a sessão*/
 
 $senhabanco = $array['senha'];
 
 if ($senhabanco == $senha) {
-    
-    header('location: /sistema/cadastro_cliente.php');
-
+	header('Location: /sistema/cadastro_cliente.php');
+}else{
+	header('Location: Login.php?msg=1');
+	mysql_close();
 }
-
-else{
-    header('location: login.php?msg=1');
-    myql_close();
-
-
-
-}
-
-
-?>

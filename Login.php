@@ -7,16 +7,22 @@
     <title>Cadastro de Cliente</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="sistema/style.css">
+        <link rel="stylesheet" href="\sistema\style.css">
 </head>
 <body>
     <div class="container">
     <div class="row">    
         <div class="col-4 img">
-          <img src="sistema/imagens/vendas.png">
+          <img src="\sistema\imagens\vendas.png">
         </div>
         <div class="col-2"></div>
           <div class="col-4 form">
+          <?php
+          if(isset($_GET['msg'])) {?>
+          <div class="alert alert-danger" role="alert">
+           Login ou senha invalida!
+          </div>
+            <?php } ?>
             <form action="logon.php" method="post">
               <div class="container">
                  <div class="row">
@@ -29,13 +35,13 @@
                           </div>
                          <div class="col">
                               <input class="btn btn-success" type="submit" value="Acessar">
-                              <a class="btn btn-outline-success" href="sistema/login_cadastrar.php" role="button">Cadastrar</a>
+                              <a class="btn btn-outline-success" href="\sistema\login_cadastrar.php" role="button">Cadastrar</a>
                           </div>
                           
                     </div>   
               </div>
             </form>
-o
+
   </div>
 </div>
 </body>

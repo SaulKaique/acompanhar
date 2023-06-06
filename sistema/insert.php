@@ -30,5 +30,7 @@ $sql = "INSERT INTO tb_cliente (nm_cliente, nm_endereço, nr_endereço, nm_bairr
 /*Comando para enviar os dados o banco*/
 $insert = mysqli_query($conexao, $sql);
 
+header('Location: cadastro_cliente.php?msg=Sucesso');
+ mysql_close();
 
 ?>

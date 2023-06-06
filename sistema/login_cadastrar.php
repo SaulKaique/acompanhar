@@ -13,21 +13,15 @@
     <div class="container">
     <div class="row">    
         <div class="col-4"></div>
-        <?php
-          if(isset($_GET['msg'])) {?>
-      
-      <div class="alert alert-success" role="alert">
-
-
-            <input id="btm" type="button" value="Comcluir" src="Login.php">
-            <h1 class="foi" >Foi cadastrado com sucesso</h1>
-            <script src="cadastro.js"></script>
-
-      </div>
-
-        <?php } ?>
-
           <div class="col-4 form">
+          
+          <?php
+          if(isset($_GET['msg'])) {?>
+          <div class="alert alert-success" role="alert">
+           Cadastrado com Sucesso
+          </div>
+            <?php } ?>
+
             <form action="insert_usuario.php" method="post">
               <div class="container">
                  <div class="row">
@@ -43,6 +37,9 @@
                           </div>
                          <div class="col">
                               <input class="btn btn-success" type="submit" value="Cadastrar">
+                          </div>
+                          <div class="col">
+                            <a class="btn btn-outline-success" href="..\login.php" role="button">Voltar</a>
                           </div>
                           
                     </div>   
