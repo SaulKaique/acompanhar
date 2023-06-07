@@ -47,39 +47,51 @@
 
 
 <h2>Formulário do Fornecedor</h2>
-	<form action="dado.php" method="post">
-		
-		<input type="text" id="nome"  placeholder="nome" name="nome" ><br><br>
+	
+<form class="form" action="dado.php" method="post">
+    <div class="container">
+
+        <div class="row">
+
+        <input  type="text" class="col-12" id="nome"  placeholder="NOME" name="nome" ><br><br>
 
 		
-		<input type="text" id="endereco" name="endereco"><br><br>
+		<input type="text" class="col-6" id="endereco" placeholder="ENDEREÇO" name="endereco"><br><br>
 
 		
-		<input type="text" id="numero" name="numero"><br><br>
+		<input type="text" class="col-2" id="numero" placeholder="NUMERO" name="numero"><br><br>
 
 		
-		<input type="text" id="bairro" name="bairro"><br><br>
+		<input type="text" class="col-3" id="bairro" placeholder="BAIRRO " name="bairro"><br><br>
 
 		
-		<input type="text" id="cidade" name="cidade"><br><br>
+		<input type="text" class="col-5" id="cidade" placeholder="CIDADE" name="cidade"><br><br>
 
 		
-		<input type="text" id="estado" name="estado"><br><br>
+		<input type="text" class="col-5" id="estado" placeholder="ESTADO" name="estado"><br><br>
 
 		
-		<input type="text" id="cep" name="cep"><br><br>
+		<input type="text" class="col-5" id="cep" placeholder="CEP" name="cep"><br><br>
 
 		
-		<input type="text" id="telefone" name="telefone"><br><br>
+		<input type="text" class="col-5" id="telefone" placeholder="TELEFONE" name="telefone"><br><br>
 
         
-        <input type="text" id="cpf" name="cpf"><br><br>
+        <input type="text" class="col-5" id="cpf" placeholder="CPF" name="cpf"><br><br>
 
         
-        <input type="email" id="email" name="email"><br><br>
+        <input type="email" class="col-5" id="email" placeholder="EMAIL" name="email"><br><br>
 
         
         <input type="reset" value="Limpar">
+
+
+        </div>
+
+		
+    
+    </div>
+    
     </form>
 
 
