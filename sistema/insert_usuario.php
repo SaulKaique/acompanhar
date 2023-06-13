@@ -22,6 +22,6 @@ $sql = "INSERT INTO usuarios (nm_user, login, senha) values ('$nome','$login','$
 $insert = mysqli_query($conexao, $sql);
 
 header('Location: login_cadastrar.php?msg=1');
-mysql_close();
+
 
 ?>

@@ -27,7 +27,7 @@
                 <a class="nav-link active" aria-current="page" href="cadastro_cliente.php">Cadastro de Cliente</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="listaCliente.php">Relatorio Cliente</a>
+                <a class="nav-link" href="listar_cliente.php">Relatório Clientes</a>
             </li>
             </ul>
         </div>
@@ -35,61 +35,48 @@
     </div>
     </nav>
 
-   
-<div class="container">
-  <div class="row" style="magin-top: 100px">
-  <div class="row">
-     
-  <table id="Exemplo" class="table table-bordered table-hover display" style-top='width:100% magin-top: 20px'>
-  <h1>Dados do Cliente</h1>
+    <!-- download -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
 
-  <thead>
-    <tr>
-    <th>Nome</th>
-    <th>CPF</th>
-    <th>Telefone</th>
-    <th>Cidade</th>
+         <div class="container">
+            <div class="row" style="margin-top: 100px">
+              <div class="row">
+                 <h1>Dados do Cliente</h1>
+                    <table id="example" class="table table-bordered table-hover display"style="width:100%; margin-top:20px">
+                        <thead>
+                          <tr>
+                            <th>Nome</th>
+                            <th>CPF</th>
+                            <th>Telefone</th>
+                            <th>Cidade</th>
 
-    </tr>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <?php
+                          include 'conexao.php';
+                          $sql = "SELECT * FROM tb_cliente";
+                          $pesquisa = mysqli_query($conexao,$sql);
 
-
-  </thead>
-
-<tbody>
-    <?php
-    include "conexao.php";
-    $variavel = "SELECT * FROM tb_cliente";
-    $pesquisa = mysqli_query($conexao,$variavel);
-
-    while ($array = mysqli_fetch_array($pesquisa)) {
-    $nome = $array['nm_cliente'];
-    $cpf = $array['cpf'];
-    $telefone = $array['telefone'];  
-    $cidade = $array['nm_cidade'];
-
-      ?>
-
-      <tr>
-      <td><?php echo $nome ?> </td>
-      <td><?php echo $cpf ?> </td>
-      <td><?php echo $telefone ?></td>
-      <td><?php echo $cidade ?></td>
-
-      </tr>
-      <?php } ?>
-  </tbody>
-</table>
-
-
-  
-
-
-
-
-</div>
-
-
-
+                          while($array = mysqli_fetch_array($pesquisa)){
+                                $nome = $array['nm_cliente'];
+                                $cpf = $array['cpf'];
+                                $telefone = $array['telefone'];
+                                $cidade = $array['nm_cidade'];
+                            ?>
+                            <tr>
+                              <td><?php echo $nome?></td>
+                              <td><?php echo $cpf?></td>
+                              <td><?php echo $telefone?></td>
+                              <td><?php echo $cidade?></td>
+                            </tr>
+                         <?php }?>
+                        </tbody>
+                    </table>
+               </div>
+            </div>
+        </div>
 
 <script type="text/javascript">
 $("#telefone").mask("(00) 00000-0000");

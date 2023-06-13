@@ -5,9 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Cliente</title>
+        <script src="https://kit.fontawesome.com/c0f408d1cc.js" crossorigin="anonymous"></script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="sistema/style.css">
+        <link rel="stylesheet" href=".css">
 </head>
 <body>
     <nav class="navbar navbar-dark bg-dark fixed-top">
@@ -18,7 +20,7 @@
         </button>
         <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
         <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">MENU</h5>
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
@@ -27,7 +29,9 @@
                 <a class="nav-link active" aria-current="page" href="cadastro_cliente.php">Cadastro de Cliente</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="listaCliente.php">Relatorio Cliente</a>
+            <a class="nav-link" href="fornecedor.php">Fornecedor</a>     
+            <a class="nav-link" href="listar_cliente.php">Relatório Clientes</a>
+                
             </li>
             </ul>
         </div>
@@ -40,9 +44,15 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
 
     <form action="insert.php" method="post">
-      <div class="container">
+          <div class="container">
             <div class="row" style="margin-top: 100px">
               <div class="row">
+                    <?php
+                    if(isset($_GET['msg'])) {?>
+                    <div class="alert alert-success" role="alert">
+                    Cadastrado com Sucesso!
+                    </div>
+                      <?php } ?>
                  <h1>Dados do Cliente</h1>
                   <div class="col-12">
                     <input type="text" name="nome" class="form-control" placeholder="Nome do Cliente" aria-label="First name">

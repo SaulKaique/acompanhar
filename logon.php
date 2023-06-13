@@ -29,3 +29,5 @@ if ($senhabanco == $senha) {
 	header('Location: Login.php?msg=1');
 	mysql_close();
 }
+
+

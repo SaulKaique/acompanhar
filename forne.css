@@ -2,7 +2,6 @@
 body{
 
         background-image: url(https://media.tenor.com/rSK5eqkGjdwAAAAC/gal%C3%A1xia-girando-orbita.gif);
-
         background-size: 0.1em;
 
 }
@@ -14,26 +13,115 @@ body{
 .form{
         padding: 0 ;
 
-      position: absolute;
-width: 650px;
-      height: 350px;
-top: 70px;
-left: 420px;     
+        position: absolute;
+        width: 700px;
+        height: 360px;
+        top: 70px;
+        left: 550px;     
        
-        background-image: linear-gradient(to left bottom, rgb(152, 9, 160), rgb(97, 11, 110));
+        background-image: linear-gradient(to left bottom, rgb(28, 126, 105), rgb(97, 11, 110));
        
-border: 3px , solid, wheat;       
-border-radius: 20px;
-       
+        
+        border-radius: 20px;
+      
+
 }
 
-
+#formt{
+        position: relative;
+        top: 30px;
+        left: 170px;
+}
 
 #nome{
         position: relative;
-        top: 10px;
-        margin-top: 20px;
-
-
+        top: 15px;
+        height: 40px;
 
 }
+
+
+#endereco{
+        position: relative;
+        top: 20px;
+        height: 40px;
+
+}
+
+#numero{
+        position: relative;
+        top: 20px;
+        left: 15px;
+        height: 40px;
+
+}
+
+#bairro{
+        position: relative;
+        top: 20px;
+        left: 30px;
+        height: 40px;
+}
+
+#cidade{
+        position: relative;
+        top: 25px;
+        height: 40px;
+}
+
+#estado{
+        position: relative;
+        top: 25px;
+        left: 30px;
+        height: 40px;
+
+}
+
+
+#cep{
+        position: relative;
+        top: 25px;
+        left: 60px;
+        height: 40px;
+
+}
+
+
+#telefone{
+        position: relative;
+        top: 30px;
+        height: 40px;
+}
+
+
+#cpf{
+        position: relative;
+        top: 30px;
+        left: 20px;
+        height: 40px;
+}
+
+#email{
+        position: relative;
+        top: 30px;
+        left: 40px;
+
+        height: 40px;
+}
+
+
+#reset{
+        position: relative;
+        top: 40px;
+        height: 40px;
+        left: 15px;
+        
+}
+
+#vai{
+        position: relative;
+        top: 40px;
+        left: 40px;
+
+}
+
