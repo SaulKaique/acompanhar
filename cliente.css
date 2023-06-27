@@ -1,0 +1,23 @@
+html{
+    height: 160%;
+}
+
+
+body{
+    background: url(sistema/imagens/fundo-3d-de-halloween-com-lobo-uivando-contra-a-lua_1048-8897.avif);
+  background-size: cover;
+
+}
+
+h1, tr{
+    color: rgb(8, 8, 8);
+
+
+}
+
+tr:hover{
+        background-color: cornsilk;
+
+
+}
+
